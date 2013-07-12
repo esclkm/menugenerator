@@ -54,7 +54,24 @@ function cot_build_menugenerator($parent = '', $usergr = 4, $level = 0, $menutre
 			$xhref = explode(".php?", $row['mg_href'], 2);
 			if(count($xhref) == 2 && preg_match("([a-zA-Z]{1,30})", $xhref[0]))
 			{
-				$row['mg_href'] = cot_url($xhref[0], $xhref[1]);
+				if($xhref[0] == 'index' && !empty($xhref[1]))
+				{
+					preg_match("/e\=([a-z]{1,65})\&?(.+)?/", $xhref[1], $matches);
+					$ext = $matches[1];
+					$params = $matches[2]; 
+					if (cot_module_active($ext))
+					{
+						$row['mg_href'] = cot_url($ext, $params);
+					}
+					else
+					{
+						$row['mg_href'] = cot_url($xhref[0], $xhref[1]);	
+					}
+				}
+				else
+				{
+					$row['mg_href'] = cot_url($xhref[0], $xhref[1]);
+				}
 			}
 			
 			$menugeneratort->assign(array(
