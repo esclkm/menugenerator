@@ -24,5 +24,3 @@ $L['Update_menu']='Generate menuge';
 $L['mg_example']='Example:<pre>	&lt;div class="menu"&gt;
 		{PHP.MENUGENERATOR.GENERAL}
 	&lt;/div&gt;</pre>'
-
-?>

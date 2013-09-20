@@ -1,6 +1,6 @@
 <!-- BEGIN: MAIN -->
 		<div class=" button-toolbar block">
-				<a href="{PHP.db_menugenerator|cot_url('admin', 'm=extrafields&n=$this')}" class="button">{PHP.L.adm_extrafields_desc}</a>
+				<a href="{PHP.db_menugenerator|cot_url('admin', 'm=extrafields&n=$this')}" class="button icon database">{PHP.L.adm_extrafields_desc}</a>
 		</div>
 <script type="text/javascript">
     var qid={PHP.local_max};

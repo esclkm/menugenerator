@@ -20,6 +20,4 @@ $L['mg_main']='Основное меню';
 $L['Update_menu']='Обновить меню';
 $L['mg_example']='Пример:<pre>	&lt;div class="menu"&gt;
 		{PHP.MENUGENERATOR.GENERAL}
-	&lt;/div&gt;</pre>'
-
-?>
+	&lt;/div&gt;</pre>';

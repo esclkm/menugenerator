@@ -18,5 +18,3 @@ if($cfg['plugin']['menugenerator']['css'])
 {
 	cot_rc_add_file($cfg['plugins_dir'] . '/menugenerator/tpl/menugenerator.css');
 }
-
-?>

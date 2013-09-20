@@ -75,6 +75,7 @@ if (count($item_id))
 			}
 		}
 	}
+	$cache && $cache->db->remove('mg_menus', 'system');
 
 }
 //ЧИТАЕМ ТАБЛИЦУ
@@ -176,5 +177,3 @@ $tt->parse('MAIN.HELP');
 
 $tt->parse('MAIN');
 $plugin_body =$tt->text('MAIN');
-
-?>
